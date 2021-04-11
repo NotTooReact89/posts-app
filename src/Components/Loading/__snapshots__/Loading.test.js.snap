@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render the component 1`] = `
+<div
+  className="loading loading--inContainer"
+>
+  <div
+    className="loading_spinner loading_spinner--inContainer"
+  >
+    <div
+      className="loading_doubleBounce1 loading_doubleBounce1--white"
+    />
+    <div
+      className="loading_doubleBounce2 loading_doubleBounce2--white"
+    />
+  </div>
+</div>
+`;
