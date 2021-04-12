@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostItem should render the component 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <div
+    className="MuiPaper-root makeStyles-paper-2 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle makeStyles-small-4 MuiAvatar-colorDefault"
+        style={
+          Object {
+            "marginRight": 10,
+          }
+        }
+      >
+        T
+      </div>
+       abc
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <h6
+          className="MuiTypography-root MuiTypography-h6"
+        />
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          xyz
+        </p>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-3"
+        disabled={false}
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeMedium"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"
+              />
+            </svg>
+          </span>
+          undefined comments
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

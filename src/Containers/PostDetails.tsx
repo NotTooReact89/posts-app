@@ -5,9 +5,13 @@ import {
   createStyles,
   makeStyles,
   Theme,
+  Button,
 } from "@material-ui/core";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { Redirect } from "react-router-dom";
+import { Fragment, useState } from "react";
 import { useParams } from "react-router-dom";
-import { PostItem } from "../Components/PostItem/PostItem";
+import PostItem from "../Components/PostItem/PostItem";
 import { usePostsByIdSelector } from "../Redux/Hooks/Posts";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -26,6 +30,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
     },
+    backButton: {
+      margin: `${theme.spacing(1)}px auto`,
+      padding: theme.spacing(2),
+    },
     small: {
       fontSize: "1rem",
     },
@@ -36,16 +44,26 @@ export const PostDetails = () => {
   window.scrollTo(0, 0);
 
   const classes = useStyles();
+  const [goBack, setGoBack] = useState(false);
 
   const { id } = useParams<{ id: string }>();
 
   const post = usePostsByIdSelector(parseInt(id, 10));
 
   return (
-    <>
-      {/* Put a back button */}
-      {post && (
-        <div className={classes.root}>
+    <Fragment>
+      {goBack && <Redirect to="/" />}
+      <div className={classes.root}>
+        <Button
+          className={classes.backButton}
+          variant="contained"
+          color="primary"
+          startIcon={<ArrowBackIosIcon />}
+          onClick={() => setGoBack(true)}
+        >
+          Go back
+        </Button>
+        {post && (
           <Paper className={classes.paper}>
             <Grid container direction="row" alignItems="center">
               {`Posted by ${post.userDetails.name}`}
@@ -71,9 +89,9 @@ export const PostDetails = () => {
               </Grid>
             </Grid>
           </Paper>
-        </div>
-      )}
-    </>
+        )}
+      </div>
+    </Fragment>
   );
 };
 

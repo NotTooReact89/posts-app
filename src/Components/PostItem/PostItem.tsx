@@ -51,7 +51,7 @@ interface IPostItem {
   isComment?: boolean;
 }
 
-export const PostItem = ({
+const PostItem = ({
   title,
   body,
   initials,
@@ -99,3 +99,5 @@ export const PostItem = ({
     </div>
   );
 };
+
+export default PostItem;

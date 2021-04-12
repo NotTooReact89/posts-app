@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Loading from "../Components/Loading";
-import { PostItem } from "../Components/PostItem/PostItem";
+import PostItem from "../Components/PostItem/PostItem";
 import { usePostsSelector } from "../Redux/Hooks/Posts";
 import getInitials from "../Utils/GetInitials";
 
