@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Published version
 
 You can access published version of the app.
-Open [https://lucid-tereshkova-9711ff.netlify.app/](Posts-app) to view it in the browser.
+Open [https://lucid-tereshkova-9711ff.netlify.app](https://lucid-tereshkova-9711ff.netlify.app) to view it in the browser.
 
 ## Available Scripts
 
