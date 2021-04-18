@@ -15,9 +15,6 @@ export const config: AxiosRequestConfig = {
 
 export const getPosts = () => axios.get(postsUrl, config);
 
-export const getPostDetails = (id: string) =>
-  axios.get(`${postsUrl}/${id}`, config);
-
 export const getPostComments = (id?: string) =>
   axios.get(commentsUrl, {
     ...config,
@@ -35,8 +32,6 @@ export const getUserDetails = (id?: string) =>
   });
 
 export async function getDetailsPosts() {
-  const detailedPosts: any = [];
-
   const store = createPostsStore();
 
   store.dispatch(getPostsFetching());
@@ -47,19 +42,13 @@ export async function getDetailsPosts() {
     getUserDetails(),
   ]);
 
-  const requests = posts.data.map(async (post: any) => {
-    detailedPosts.push({
-      ...post,
-      userDetails: users.data.find((user: any) => user.id === post.userId),
-      comments: postComments.data.filter(
-        (comment: any) => comment.postId === post.id
-      ),
-    });
+  const detailedPosts = posts.data.map((post: any) => ({
+    ...post,
+    userDetails: users.data.find((user: any) => user.id === post.userId),
+    comments: postComments.data.filter(
+      (comment: any) => comment.postId === post.id
+    ),
+  }));
 
-    return detailedPosts;
-  });
-
-  return Promise.all(requests).then(() => {
-    return detailedPosts;
-  });
+  return detailedPosts;
 }
